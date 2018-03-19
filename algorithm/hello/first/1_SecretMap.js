@@ -7,13 +7,11 @@ var TestCase = function(n, arr1, arr2){
 
 var testcase1 = new TestCase(5, [9, 20, 28,18, 11], [30,1, 21, 17, 28]);
 var testcase2 = new TestCase(6, [46,33,33,22,31,50], [27,56,19,14,14,10]);
-var testcase3 = new TestCase(3, [46,33,33], [27,56,19]);
 var testcase4 = new TestCase(10, [46,33,33,22,31,50,3, 22, 44, 20], [27,56,19,14,14,10, 10, 23, 40, 24]);
 
 var Test = function(){
   console.log(DecodeMap(testcase1));
   console.log(DecodeMap(testcase2));
-  console.log(DecodeMap(testcase3));
   console.log(DecodeMap(testcase4));
 };
 
@@ -41,14 +39,14 @@ var DecodeMap = function(testCase){
   var addArr = [];
   var i =0;
   for(i; i < testCase.n; i++){
-    addArr[i] = testCase.arr1[i] & testCase.arr2[i];
+    addArr[i] = testCase.arr1[i] | testCase.arr2[i];
   }
 
   var binaryArrays = [];
   var resultArr = [];
   for(i = 0; i < testCase.n; i++){
     binaryArrays[i] = ToBinaryStringArray(addArr[i], testCase.n);
-    if(binaryArrays[i] == null || binaryArrays[i] != testCase.n){
+    if(binaryArrays[i] == null || binaryArrays[i].length != testCase.n){
       return null;
     }
     resultArr[i] = ConvertWall(binaryArrays[i]);
