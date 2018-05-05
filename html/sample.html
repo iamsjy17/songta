@@ -1,0 +1,71 @@
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="description" content="기본샘플">
+      <meta name="keywords" content="a">
+      <meta name="author" content="song">
+      <meta http-equiv="refresh" content="30" >
+      <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+      <iframe src="https://opentutorials.org/course/2039/10951" width="500" height="500"></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/AXWLsGgRdAk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <h1><a href="sample0.html">Sample0</a></h1>
+      <img src="sample.jpg" height="200" alt="아기여우">
+      <p>HyperText Markup Language, commonly referred to as HTML, is the standard markup language used to create web pages. Along with CSS, and JavaScript, HTML is a cornerstone technology, used by most websites to create visually engaging webpages, user interfaces for web applications, and user interfaces for many mobile applications.[1] Web browsers can read HTML files and render them into visible or audible web pages. HTML describes the structure of a website semantically along with cues for presentation, making it a markup language, rather than a programming language.</p>
+      <br>
+      <br>
+      <p>HTML elements form the building blocks of all websites. HTML allows images and objects to be embedded and can be used to create interactive forms. It provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items.</p>
+      <br>
+      <p>The language is written in the form of HTML elements consisting of tags enclosed in angle brackets . Browsers do not display the HTML tags and scripts, but use them to interpret the content of the page.</p>
+
+      <table border="1">
+        <thead>
+          <tr>
+            <th>이름</th>     <th>성별</th>   <th>주소</th> <th>회비</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>최진혁</td>  <td>남</td>      <td rowspan="2">청주</td> <td>1000</td>
+          </tr>
+          <tr>
+            <td>최유빈</td>  <td>여</td>      <td>500</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">합계</td>      <td>1500</td>
+          </tr>
+        </tfoot>
+      </table>
+      <form action="http://localhost/upload.php" method="post" enctype="multipart/form-data">
+        <p>아이디 : <input type="text" name="id" value = "Defaut value"></p>
+        <p>비밀번호 : <input type="password" name="pwd"></p>
+        <p>주소 : <input type="text" name="address"></p>
+        <p>
+          <label>textarea :
+            <textarea cols="50" rows="2" name="etc">default value</textarea>
+          </label>
+        </p>
+        <p>
+          <h1>색상(단일선택)</h1>
+          <label for="red">붉은색</label> :
+          <input type="radio" id="red" name="color" value="red">
+          <label for="block">검은색</label> :
+          <input type="radio" id="block" name="color" value="black" checked>
+          <label for="blue">파란색</label> :
+          <input type="radio" id="blue" name="color" value="blue">
+        </p>
+        <p>
+          <h1>사이즈(다중선택)</h1>
+          95 : <input type="checkbox" name="size" value="95">
+          100 : <input type="checkbox" name="size" value="100" checked>
+          105 : <input type="checkbox" name="size" value="105" checked>
+        </p>
+        <input type="hidden" name="hide" value="songta">
+        <input type="file" name="profile"/>
+        <input type="submit">
+      </form>
+    </body>
+</html>

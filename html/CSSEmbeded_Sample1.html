@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Embeded Example</title>
+    <style>
+      h2{
+        color: blue;
+        text-decoration:underline;
+      }
+
+      li:hover{
+        color: yellow;
+      }
+      li:active{
+        color: white;
+      }
+
+      a:visited{
+        color:red;
+      }
+      a:focus{
+        color:white;
+      }
+
+      ul, ol{
+        background-color: powderblue;
+      }
+      ul li{
+        text-decoration:underline;
+        color: green;
+      }
+      #css{
+        font-size: 50px;
+        color:red;
+      }
+      #lecture>li{
+        font-size: 20px;
+        color:blue;
+        border:1px solid red;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1 style="color:red">오늘도~~</h1>
+    <h2>오늘도~</h2>
+    <ul>
+      <li id="css">css</li>
+      <li>html</li>
+      <li>javascript</li>
+    </ul>
+    <ol id="lecture">
+      <li>css</li>
+      <ol>
+        <li>selecter</li>
+        <li>decorator</li>
+      </ol>
+      <li>html</li>
+      <li>javascript</li>
+      <a href="http://naver.com">
+        <li>
+          react
+        </li>
+      </a>
+    </ol>
+  </body>
+</html>
